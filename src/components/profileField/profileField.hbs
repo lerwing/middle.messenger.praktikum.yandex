@@ -1,0 +1,15 @@
+
+<div class="profileField">
+  <p class="profileFieldName">{{title}}</p>
+  {{> 'input/input' 
+    name=name 
+    placeholder=placeholder 
+    invalidMsg=invalidMsg 
+    disabled=disabled
+  }}
+  {{#if disabled}}
+  <button class="buttonProfileField"><img src="../../static/wing.png" alt="edit"></button>
+  {{else}}
+  <button class="buttonProfileField"><img src="../../static/chek.svg" alt="send"></button>
+  {{/if}}
+</div>
