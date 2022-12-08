@@ -10,3 +10,7 @@
 Локальный запуск проекта (Чат разворачиваеться на порту 3000)
 - `npm run build` — сборка проекта,
 - `npm run start` — сборка и запуск локального сервера.
+
+---
+# Ревью
+- «[Ссылка на пул реквест](https://github.com/lerwing/middle.messenger.praktikum.yandex/pull/10)»
