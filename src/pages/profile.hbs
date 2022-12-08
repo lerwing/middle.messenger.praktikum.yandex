@@ -1,0 +1,80 @@
+---
+inputClass: 'inputProfile'
+valid : 'notDisplay'
+inputTitleClass: 'notDisplay'
+inputClassInForm: 'inputConteinerProfile'
+disabled: 'disabled'
+user: {
+  email: 'vasya@yandex.ru',
+  login: 'vasya123',
+  first_name: 'Василий',
+  second_name: 'Пупкин',
+  display_name: 'Вася',
+  phone: '+79001111111'
+}
+---
+{{!< main}}
+
+<main class="main">
+  <div class="navBar">
+    <button><img src="../../static/arrow.svg" alt="back"></button>
+  </div>
+  <div class="fullEmplyCentr">
+    <div class="formProfile">
+      <button class="avatarBig">
+        <img src="../../static/img.svg" alt="img">
+        <span class="avatarBigText">Поменять аватар</span>
+      </button>
+      <H1 class="formTitleProfile">{{user.display_name}}</H1>
+      {{> 'profileField/profileField' 
+        name="email" 
+        title="Почта" 
+        placeholder=user.email 
+        invalidMsg="Некоректный email"
+      }}
+      {{> 'profileField/profileField' 
+        name="login" 
+        title="Логин" 
+        placeholder=user.login 
+        invalidMsg="Недопустимое имя пользовотеля"
+      }}
+      {{> 'profileField/profileField' 
+        name="first_name" 
+        title="Имя" 
+        placeholder=user.first_name 
+        invalidMsg="Имя должно состаять из букв"
+      }}
+      {{> 'profileField/profileField' 
+        name="second_name" 
+        title="Фамилия" 
+        placeholder=user.second_name 
+        invalidMsg="Фамилия должна состаять из букв"
+      }}
+      {{> 'profileField/profileField' 
+        name="display_name" 
+        title="Имя в чате" 
+        placeholder=user.display_name 
+        invalidMsg="Не менее 3х символов"
+      }}
+      {{> 'profileField/profileField' 
+        name="phone" 
+        title="Телефон" 
+        placeholder=user.phone 
+        invalidMsg="Некоректный номер телефона" 
+        disabled='' 
+        inputClass='inputProfile inputInvalid' 
+        valid=''
+      }}
+      {{> 'button/button' 
+        buttonClass = "buttonProfileBlue"
+        disabled="disabled"
+        buttonText = "Изменить пароль"
+      }}
+      {{> 'button/button' 
+        buttonClass = "buttonProfileRed"
+        disabled="disabled"
+        buttonText = "Выйти"
+      }}
+    </div>
+  </div>
+</main>

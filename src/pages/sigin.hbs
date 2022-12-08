@@ -1,0 +1,32 @@
+---
+inputClass: 'input'
+valid : 'notDisplay'
+invalidMsg: 'Неверный логин или пароль'
+inputClassInForm: 'inputConteinerSigin'
+inputTitleClass: 'inputTitle'
+buttonClass: 'buttonSigin'
+buttonText: 'Войти'
+---
+{{!< main}}
+
+<main class="mainCentr">
+  <form class="formSigin">
+    <h1 class="formTitleSigin">Вход</h1>
+    {{> 'input/input' 
+      name="login" 
+      title="Логин" 
+      placeholder="Логин" 
+    }}
+    {{> 'input/input' 
+      name="password" 
+      title="Пароль" 
+      placeholder="Пароль"
+      inputClass="inputInvalid" 
+      valid="" 
+    }}
+    {{> 'button/button' 
+      disabled="disabled" 
+    }}
+    <a class="link" href="registr.hbs">Нет аккаунта?</a>
+  </form>
+</main>

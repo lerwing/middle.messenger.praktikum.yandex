@@ -1,0 +1,65 @@
+---
+inputClass: 'input'
+valid : 'notDisplay'
+inputClassInForm: 'inputConteinerRegistr'
+inputTitleClass: 'inputTitle'
+buttonClass: 'buttonRegistr'
+buttonText: 'Зарегистрироваться'
+---
+{{!< main}}
+
+<main class="mainCentr">
+  <form class="formRegistr">
+    <h1 class="formTitleRegistr">Регистрация</h1>
+    {{> 'input/input' 
+      name="email" 
+      title="Почта" 
+      placeholder="email" 
+      invalidMsg="Некоректный email"
+    }}
+    {{> 'input/input' 
+      name="login" 
+      title="Логин" 
+      placeholder="Логин" 
+      invalidMsg="Недопустимое имя пользовотеля"
+    }}
+    {{> 'input/input' 
+      name="first_name" 
+      title="Имя" 
+      placeholder="Имя" 
+      invalidMsg="Имя должно состаять из букв"
+    }}
+    {{> 'input/input' 
+      name="second_name" 
+      title="Фамилия" 
+      placeholder="Фамилия" 
+      invalidMsg="Фамилия должна состаять из букв"
+    }}
+    {{> 'input/input' 
+      name="phone" 
+      title="Телефон" 
+      placeholder="+7 (ХХХ) ХХХ ХХ ХХ" 
+      invalidMsg="Некоректный номер телефона"
+    }}
+    {{> 'input/input' 
+      name="password" 
+      title="Пароль" 
+      placeholder="Пароль"  
+      valid="" 
+      invalidMsg="Пароль слишком короткий"
+      inputClass="inputInvalid"
+    }}
+    {{> 'input/input' 
+      name="password_confirm" 
+      title="Пароль (еще раз)" 
+      placeholder="Пароль"  
+      valid="" 
+      invalidMsg="Пароли не совпадают"
+      inputClass="inputInvalid"
+    }}
+    {{> 'button/button' 
+      disabled="" 
+    }}
+    <a class="link" href="sigin.hbs">Войти</a>
+  </form>
+</main>
