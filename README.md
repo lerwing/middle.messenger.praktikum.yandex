@@ -1,9 +1,9 @@
 ### Учебный проект "Чат"
 Это самый обыкновенный чат с минимальным функционалом.
 ## версия 0.1 Выполнена статическая верстка по макету кнопки отлючены, просмотр страниц осуществляется через главную страницу со ссылками.
-![Макет в фигме](https://www.figma.com/file/VTKel1DDWSFbUJbdXuJpx8/WBW_underwold?node-id=114%3A203&t=tPSWiQ2DJmbvmmmp-1)
+- «[Макет в фигме](https://www.figma.com/file/VTKel1DDWSFbUJbdXuJpx8/WBW_underwold?node-id=114%3A203&t=tPSWiQ2DJmbvmmmp-1)»
 ## Проект развернут на платформе netlify
-![Перейти на страницу чата](https://snazzy-raindrop-856542.netlify.app/)
+- «[Перейти на страницу чата](https://snazzy-raindrop-856542.netlify.app/)»
 ---
 
 Локальный запуск проекта (Чат разворачиваеться на порту 3000)
