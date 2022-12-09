@@ -1,0 +1,77 @@
+@import "../../styles/mixsins.scss";
+
+.chatCard {
+  display: flex;
+  flex-direction: row;
+  width: 310px;
+  height: 67px;
+  background: #F2F2F2;
+  margin-bottom: 2px;
+    &:hover {
+      background: #FFD8FE;
+    }
+    &.Activ {
+      @extend .chatCard;
+      background: #FFB6FC;
+    }
+  &Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 193px;
+    height: 44px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    margin-right: 15px;
+    &Name {
+      display: inline-block;
+      width: 193px;
+      @include text(13px, 600, #1E1E1E);
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &LastMessege {
+      @extend .chatCardContentName;
+      @include text(12px, 500, #999999);
+    }
+    &You {
+      display: inline;
+      @include text(12px, 500, #1E1E1E);
+    }
+  }
+  &Info {
+    @extend .chatCardContent;
+    align-items: flex-end;
+    width: 25px;
+    height: 47px;
+    margin: 10px;
+    margin-left: 0;
+    margin-right: 10px;
+    &Date {
+      display: block;
+      width: 24px;
+      height: 9px;
+      @include text(9px, 500, #999999);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    &Count {
+      @include flexCentr();
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      background: #E054DB;
+      @include text(9px, 500, #FFFFFF);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+.avatar {
+  @include avatar(47px);
+  margin: 10px;
+}

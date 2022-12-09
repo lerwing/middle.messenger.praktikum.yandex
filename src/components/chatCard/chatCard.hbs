@@ -1,0 +1,19 @@
+
+<button {{disabled}}>
+  <span class="chatCard {{chatActiv}}">
+    <div class="avatar"></div>
+    <div class="chatCardContent">
+      <span class="chatCardContentName">{{chatName}}</span>
+      <span class="chatCardContentLastMessege">
+        <span class="chatCardContentYou">{{userMessage}}</span>
+        {{message}}
+      </span>
+    </div>
+    <div class="chatCardInfo">
+      <span class="chatCardInfoDate">{{dateMessage}}</span>
+      {{#if count}}
+      <div class="chatCardInfoCount">{{count}}</div>
+      {{/if}}
+    </div>
+  </span>
+</button>

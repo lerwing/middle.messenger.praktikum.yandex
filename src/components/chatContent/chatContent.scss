@@ -1,0 +1,46 @@
+@import "../../styles/mixsins.scss";
+
+.chatDate {
+  @include text(12px, 500, #999999);
+  align-self: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.hisMessage {
+  display: flex;
+  flex-direction: row;
+  align-self: start;
+  margin-top: 10px;
+  max-width: 60%;
+  padding: 7px;
+  background: #F8F8F8;
+  border-radius: 12px;
+}
+.myMessage {
+  @extend .hisMessage;
+  align-self: end;
+  background: #F2D1F1;
+}
+.hisMessageText {
+  display: block;
+  margin: 0;
+  @include text(12px, 500, #1E1E1E);
+  line-height: 15px;
+}
+.myMessageText {
+  @extend .hisMessageText;
+}
+.hisMessageTime {
+  display: block;
+  align-self: flex-end;
+  text-align: right;
+  min-width: 26px;
+  max-width: 26px;
+  min-height: 9px;
+  max-height: 9px;
+  @include text(9px, 500, #999999);
+}
+.myMessageTime {
+  @extend .hisMessageTime;
+  color: #F00CE7;
+}
