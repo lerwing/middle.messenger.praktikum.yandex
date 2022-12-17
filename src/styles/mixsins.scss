@@ -1,4 +1,6 @@
-@mixin text($size: 12, $bold: 500, $color: #1E1E1E) {
+@import 'colors.scss';
+
+@mixin text($size: 12, $bold: 500, $color: $main-black) {
   font-family: 'Inter';
   font-weight: $bold;
   font-size: $size;
@@ -26,6 +28,6 @@
   height: $size;
   min-width: $size;
   min-height: $size;
-  background: #EFEFEF;
-  box-shadow: 0px 0px 1px 1px rgba(255, 0, 168, 0.1);
+  background: $wite-grey;
+  box-shadow: 0px 0px 1px 1px $pink-01;
 }

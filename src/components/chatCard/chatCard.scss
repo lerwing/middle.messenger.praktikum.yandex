@@ -1,19 +1,19 @@
-@import "../../styles/mixsins.scss";
+@import '../../styles/mixsins.scss';
 
 .chatCard {
   display: flex;
   flex-direction: row;
   width: 310px;
   height: 67px;
-  background: #F2F2F2;
+  background: $wite-grey;
   margin-bottom: 2px;
-    &:hover {
-      background: #FFD8FE;
-    }
-    &.Activ {
-      @extend .chatCard;
-      background: #FFB6FC;
-    }
+  &:hover {
+    background: $pink-ssligth;
+  }
+  &.Activ {
+    @extend .chatCard;
+    background: $pink-sligth;
+  }
   &Content {
     display: flex;
     flex-direction: column;
@@ -27,7 +27,7 @@
     &Name {
       display: inline-block;
       width: 193px;
-      @include text(13px, 600, #1E1E1E);
+      @include text(13px, 600, $main-black);
       text-align: left;
       white-space: nowrap;
       overflow: hidden;
@@ -35,11 +35,11 @@
     }
     &LastMessege {
       @extend .chatCardContentName;
-      @include text(12px, 500, #999999);
+      @include text(12px, 500, $grey);
     }
     &You {
       display: inline;
-      @include text(12px, 500, #1E1E1E);
+      @include text(12px, 500, $main-black);
     }
   }
   &Info {
@@ -54,7 +54,7 @@
       display: block;
       width: 24px;
       height: 9px;
-      @include text(9px, 500, #999999);
+      @include text(9px, 500, $grey);
       white-space: nowrap;
       overflow: hidden;
     }
@@ -63,8 +63,8 @@
       border-radius: 50%;
       width: 20px;
       height: 20px;
-      background: #E054DB;
-      @include text(9px, 500, #FFFFFF);
+      background: $pink-ligth;
+      @include text(9px, 500, $wite);
       white-space: nowrap;
       overflow: hidden;
     }

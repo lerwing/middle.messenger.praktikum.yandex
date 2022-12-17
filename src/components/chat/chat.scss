@@ -1,4 +1,4 @@
-@import "../../styles/mixsins.scss";
+@import '../../styles/mixsins.scss';
 
 .chatWindow {
   @include allSpace();
@@ -14,8 +14,8 @@
   flex-direction: row;
   height: 61px;
   min-height: 61px;
-  background: #FFE3FE;
-  box-shadow: 0px 1px 0px #EAEAEA;
+  background: $pink-wite;
+  box-shadow: 0px 1px 0px $wite-grey;
   margin-left: 1px;
 }
 .chatAvatar {
@@ -26,7 +26,7 @@
 }
 .chatName {
   display: block;
-  @include text(13px, 600, #1E1E1E);
+  @include text(13px, 600, $main-black);
   margin-top: 8px;
   height: 13px;
   width: 100%;
@@ -64,8 +64,8 @@
   min-height: 55px;
   height: 55px;
   margin-left: 1px;
-  background: #FFE3FE;
-  box-shadow: 0px -1px 0px #EAEAEA;
+  background: $pink-wite;
+  box-shadow: 0px -1px 0px $wite-grey;
 }
 
 .inputMessage {
@@ -74,13 +74,13 @@
   height: 32px;
   margin-bottom: 10px;
   margin-left: 62px;
-  background: #FFFBFB;
-  border: 1px solid #F00CE7;
+  background: $wite;
+  border: 1px solid $pink;
   border-radius: 30px;
   padding-left: 20px;
   padding-right: 20px;
   &:focus {
-    box-shadow: 0px 0px 2px rgba(232, 27, 211, 0.7);
+    box-shadow: 0px 0px 2px $pink-opaciti;
     outline: none;
   }
   &Send {
@@ -98,4 +98,3 @@
     }
   }
 }
-

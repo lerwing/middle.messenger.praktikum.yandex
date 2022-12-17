@@ -1,4 +1,4 @@
-@import "mixsins.scss";
+@import 'mixsins.scss';
 
 .form {
   display: flex;
@@ -7,8 +7,8 @@
   align-items: center;
   justify-content: flex-start;
   width: 340px;
-  background: #ffffff;
-  box-shadow: 0px 0px 6px #e81bd3b3;
+  background: $wite;
+  box-shadow: 0px 0px 6px $pink-opaciti;
   border-radius: 12px;
 
   &Sigin {
@@ -33,7 +33,7 @@
     font-size: 20px;
     line-height: 20px;
     text-align: center;
-    color: #1E1E1E;
+    color: $main-black;
     margin-top: 28px;
 
     &Sigin {
@@ -61,8 +61,8 @@
   width: 64px;
   height: 100%;
   @include flexCentr();
-  background: #FFF7FC;
-  box-shadow: 0px 2px 2px #ee5ce8a1;
+  background: $pink-swite;
+  box-shadow: 0px 2px 2px $pink-06;
 }
 
 .avatarBig {
@@ -70,12 +70,12 @@
   @include avatar(130px);
   &Text {
     @extend .avatarBig;
-    @include text(13px, 500, #ffffff);
+    @include text(13px, 500, $wite);
     line-height: 14px;
     opacity: 0;
     position: absolute;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.4);
+    background: $black04;
     &:hover {
       opacity: 1;
     }

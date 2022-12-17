@@ -1,4 +1,4 @@
-@import "mixsins.scss";
+@import 'mixsins.scss';
 @import url(../components/input/input.scss);
 @import url(../components/button/button.scss);
 @import url(../components/profileField/profileField.scss);
@@ -9,8 +9,9 @@
 @import url(chats.scss);
 @import url(../../static/inter/inter.css);
 
-:root { font-family: 'Inter', sans-serif; }
-
+:root {
+  font-family: 'Inter', sans-serif;
+}
 
 *,
 *:before,
@@ -73,7 +74,7 @@ button,
   font-weight: 600;
   font-size: 11px;
   line-height: 11px;
-  color: #F00CE7;
+  color: $pink;
 }
 
 .error {
@@ -82,11 +83,11 @@ button,
   @include flexCentr();
   flex-direction: column;
   &Number {
-    @include text(40px, 500, #1E1E1E);
+    @include text(40px, 500, $main-black);
     margin: 0;
   }
   &Message {
-    @include text(20px, 500, #1E1E1E);
+    @include text(20px, 500, $main-black);
     margin-top: 20px;
     margin-bottom: 69px;
   }

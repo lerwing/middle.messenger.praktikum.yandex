@@ -1,0 +1,21 @@
+{
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": { "source.fixAll": true },
+  "eslint.alwaysShowStatus": true,
+  "editor.tabSize": 2,
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "prettier.endOfLine": "auto",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "editor.renderFinalNewline": true,
+}
