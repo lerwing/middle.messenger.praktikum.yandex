@@ -13,9 +13,10 @@
   "editor.codeActionsOnSave": { "source.fixAll": true },
   "eslint.alwaysShowStatus": true,
   "editor.tabSize": 2,
-  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.tsdk": "node_modules/typescript/lib",
   "prettier.endOfLine": "auto",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "editor.renderFinalNewline": true,
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
