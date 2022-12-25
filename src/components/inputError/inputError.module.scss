@@ -1,0 +1,7 @@
+@import '../../styles/mixsins.scss';
+
+.inputErorr {
+  margin-left: 11px;
+  @include text(9px, 400, $red-wite);
+  line-height: 8px;
+}

@@ -1,22 +1,27 @@
 import { Block } from 'core'
-import template from 'bundle-text:./button.hbs'
 
 interface ButtonProps {
-  text: string
+  text?: string
+  img?: string
+  alt?: string
   onClick: () => void
   disabled: '' | 'disabled'
   className: string
 }
 
 export class Button extends Block {
-  constructor({ text, onClick, disabled, className }: ButtonProps) {
-    super({ text, className, disabled, events: { click: onClick } })
+  constructor({ text, onClick, disabled, className, img, alt }: ButtonProps) {
+    super({ text, img, alt, className, disabled, events: { click: onClick } })
   }
   render(): string {
     return `
-    <button class={{className}} {{disabled}}>
-      {{text}}
-    </button>
+      <button  class="{{className}}" {{disabled}} type="button">
+        {{#if img}}
+          <img  src="{{img}}" alt="{{alt}}">
+        {{else}}
+          {{text}}
+        {{/if}}
+      </button>
     `
   }
 }

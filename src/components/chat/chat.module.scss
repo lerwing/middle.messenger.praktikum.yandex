@@ -68,33 +68,26 @@
   box-shadow: 0px -1px 0px $wite-grey;
 }
 
-.inputMessage {
-  width: 100%;
-  min-width: 200px;
-  height: 32px;
-  margin-bottom: 10px;
-  margin-left: 62px;
-  background: $wite;
-  border: 1px solid $pink;
-  border-radius: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  &:focus {
-    box-shadow: 0px 0px 2px $pink-opaciti;
-    outline: none;
+
+.chatSend {
+  max-height: 28px;
+  min-height: 28px;
+  max-width: 28px;
+  min-width: 28px;
+  margin-bottom: 12px;
+  margin-left: 10px;
+  margin-right: 20px;
+  & img {
+    transform: scale(-1, 1);
+    height: 28px;
+    width: 28px;
   }
-  &Send {
-    max-height: 28px;
-    min-height: 28px;
-    max-width: 28px;
-    min-width: 28px;
-    margin-bottom: 12px;
-    margin-left: 10px;
-    margin-right: 20px;
-    & img {
-      transform: scale(-1, 1);
-      height: 28px;
-      width: 28px;
-    }
-  }
+}
+
+
+.notSelectChat {
+  @include allSpace();
+  @include flexCentr();
+  text-align: center;
+  @include text(12px, 500, $grey);
 }

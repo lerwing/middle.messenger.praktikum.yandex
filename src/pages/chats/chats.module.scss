@@ -1,4 +1,4 @@
-@import 'mixsins.scss';
+@import '../../styles/mixsins.scss';
 
 .chatNav {
   display: flex;
@@ -47,11 +47,4 @@
       }
     }
   }
-}
-
-.notSelectChat {
-  @include allSpace();
-  @include flexCentr();
-  text-align: center;
-  @include text(12px, 500, $grey);
 }

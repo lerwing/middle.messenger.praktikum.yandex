@@ -1,5 +1,6 @@
 import { Block } from 'core'
-import * as stile from '../../components/button/button.module.scss'
+import * as buttonClass from 'components/button/button.module.scss'
+import * as stile from '../../styles/form.module.scss'
 
 export class Sigin extends Block {
   protected getStateFromProps() {
@@ -12,22 +13,39 @@ export class Sigin extends Block {
         password: '',
       },
       errors: {
-        login: '',
+        login: 'w',
         password: '',
       },
     }
   }
   render(): string {
     const { base, values, errors } = this.state
+    if (!errors.login && !errors.password) {
+      base.disabledBtn = undefined
+    }
     return `
     <main class="mainCentr">
-      <form class="formSigin">
-        <h1 class="formTitleSigin">Вход</h1>
-        
+      <form class="${stile.formSigin}">
+        <h1 class="${stile.formTitleSigin}">Вход</h1>
+        {{{InputConteiner
+          name="login"
+          title="Логин"
+          placeholder="Логин"
+          pageUse="sigin"
+          invalidMsg="${errors.login}"
+        }}}
+        {{{InputConteiner
+          name="password"
+          type="password"
+          title="Пароль"
+          placeholder="Пароль"
+          pageUse="sigin"
+          invalidMsg="${errors.password}"
+        }}}
         {{{Button 
           disabled="${base.disabledBtn}"
           text="Войти"
-          className="${stile.buttonSigin}"
+          className="${buttonClass.buttonSigin}"
         }}}
         <a class="link" href="">Нет аккаунта?</a>
       </form>
