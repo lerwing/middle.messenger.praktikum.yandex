@@ -1,0 +1,22 @@
+@import '../../styles/mixsins.scss';
+
+.profileField {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 460px;
+  height: 41px;
+  margin-bottom: 5px;
+
+  &Name {
+    display: flex;
+    margin: 0;
+    margin-left: 54px;
+    width: 109px;
+    height: 41px;
+    align-items: center;
+    @include text(13px, 500, $main-black);
+  }
+}

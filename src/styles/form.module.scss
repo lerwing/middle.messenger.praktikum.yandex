@@ -1,0 +1,83 @@
+@import 'mixsins.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: 340px;
+  background: $wite;
+  box-shadow: 0px 0px 6px $pink-opaciti;
+  border-radius: 12px;
+
+  &Sigin {
+    @extend .form;
+    height: 450px;
+  }
+
+  &Registr {
+    @extend .form;
+    height: 592px;
+  }
+
+  &Profile {
+    @extend .form;
+    width: 460px;
+    height: 570px;
+    padding-top: 21px;
+  }
+
+  &Title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: $main-black;
+    margin-top: 28px;
+
+    &Sigin {
+      @extend .formTitle;
+      margin-bottom: 58px;
+    }
+
+    &Registr {
+      @extend .formTitle;
+      margin-bottom: 12px;
+    }
+
+    &Profile {
+      @extend .formTitle;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 16px;
+      margin-top: 21px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.navBar {
+  width: 64px;
+  height: 100%;
+  @include flexCentr();
+  background: $pink-swite;
+  box-shadow: 0px 2px 2px $pink-06;
+}
+
+.avatarBig {
+  @include flexCentr();
+  @include avatar(130px);
+  &Text {
+    @extend .avatarBig;
+    @include text(13px, 500, $wite);
+    line-height: 14px;
+    opacity: 0;
+    position: absolute;
+    padding: 20px;
+    background: $black04;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
