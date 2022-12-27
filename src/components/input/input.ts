@@ -1,19 +1,27 @@
-import { Block } from 'core'
-import * as stile from './input.module.scss'
+import { Block } from 'core';
+import * as stile from './input.module.scss';
 
 interface InputProps {
-  name: string
-  type?: string
-  onChange: () => void
-  placeholder: string
-  pageUse?: 'sigin' | 'registr' | 'profile' | 'chat'
-  disabled?: boolean
-  invalid?: boolean
+  name: string;
+  type?: string;
+  onBlur?: () => void;
+  onFocus?: () => void;
+  onInput?: () => void;
+  placeholder: string;
+  pageUse?: 'sigin' | 'registr' | 'profile' | 'chat';
+  disabled?: boolean;
+  invalid?: boolean;
+  value?: string;
 }
 
 export class Input extends Block {
-  constructor({ onChange = () => {}, ...props }: InputProps) {
+  constructor({ onInput, onFocus, onBlur, ...props }: InputProps) {
     super({
+      events: {
+        input: onInput,
+        focus: onFocus,
+        blur: onBlur,
+      },
       ...props,
       inputClass: stile.input,
       ...(props.pageUse === 'profile' && {
@@ -31,8 +39,7 @@ export class Input extends Block {
           inputClass: stile.inputProfileInvalid,
         }),
       }),
-      events: { input: onChange },
-    })
+    });
   }
 
   render(): string {
@@ -42,7 +49,8 @@ export class Input extends Block {
       name='{{name}}' 
       placeholder='{{placeholder}}' 
       type='{{#if type}}{{type}}{{else}}text{{/if}}' 
+      {{#if value}} value={{value}}{{/if}}
       {{#if disabled}}disabled{{/if}}/>
-    `
+    `;
   }
 }

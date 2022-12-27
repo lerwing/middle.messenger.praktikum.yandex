@@ -1,11 +1,8 @@
-import { Block } from 'core'
-import * as style from './chats.module.scss'
-import * as styleBtn from 'components/button/button.module.scss'
+import { Block } from 'core';
+import * as style from './chats.module.scss';
+import * as styleBtn from 'components/button/button.module.scss';
 
 export class Chats extends Block {
-  protected getStateFromProps(): void {
-    this.state = {}
-  }
   render(): string {
     return `
     <main class="main">
@@ -39,7 +36,7 @@ export class Chats extends Block {
           message="Текст последнего сообщения"
           dateMessage="07.12"
           chatActiv=false
-          selectChatName="Имя чата"
+          onClick=onSelect
         }}}
         {{{ChatCard
           count=10
@@ -48,7 +45,7 @@ export class Chats extends Block {
           message="Текст последнего сообщения"
           dateMessage="07.12"
           chatActiv=false
-          selectChatName="Имя чата"
+          onClick=onSelect
         }}}
         {{{ChatCard
           count=10
@@ -57,7 +54,7 @@ export class Chats extends Block {
           message="Текст последнего сообщения"
           dateMessage="07.12"
           chatActiv=true
-          selectChatName="Имя чата"
+          onClick=onSelect
         }}}
         {{{ChatCard
           count=10
@@ -66,7 +63,7 @@ export class Chats extends Block {
           message="Текст последнего сообщения"
           dateMessage="07.12"
           chatActiv=false
-          selectChatName="Имя чата"
+          onClick=onSelect
         }}}
         </div>
       </nav>
@@ -74,6 +71,6 @@ export class Chats extends Block {
         selectChatName="Имя чата"
       }}}
     </main>
-    `
+    `;
   }
 }

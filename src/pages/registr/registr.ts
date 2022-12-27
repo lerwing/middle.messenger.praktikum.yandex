@@ -1,34 +1,41 @@
-import { Block } from 'core'
-import * as style from '../../styles/form.module.scss'
-import * as styleBtn from 'components/button/button.module.scss'
+import { Block } from 'core';
+import * as style from '../../styles/form.module.scss';
+import * as styleBtn from 'components/button/button.module.scss';
+import { submitForm } from 'utils/submitForm';
 
 interface RegistrState {
-  base: { disabledBtn?: string }
+  base: { disabledBtn?: string };
   errors: {
-    email: string
-    login: string
-    first_name: string
-    second_name: string
-    phone: string
-    password: string
-    passwordConfirm: string
-  }
+    email: string;
+    login: string;
+    first_name: string;
+    second_name: string;
+    phone: string;
+    password: string;
+    passwordConfirm: string;
+  };
   values: {
-    email: string
-    login: string
-    first_name: string
-    second_name: string
-    phone: string
-    password: string
-    passwordConfirm: string
-  }
+    email: string;
+    login: string;
+    first_name: string;
+    second_name: string;
+    phone: string;
+    password: string;
+    passwordConfirm: string;
+  };
 }
 
 export class Registr extends Block {
+  constructor() {
+    super();
+    this.setProps({
+      onSubmit: () => submitForm(),
+    });
+  }
   protected getStateFromProps(): void {
     this.state = <RegistrState>{
       base: {
-        disabledBtn: 'disabled',
+        disabledBtn: '',
       },
       values: {
         email: '',
@@ -48,10 +55,10 @@ export class Registr extends Block {
         password: '',
         passwordConfirm: '',
       },
-    }
+    };
   }
   render(): string {
-    const { base, errors } = <RegistrState>this.state
+    const { base, errors } = <RegistrState>this.state;
     return `
     <main class="mainCentr">
       <form class="${style.formRegistr}">
@@ -90,7 +97,7 @@ export class Registr extends Block {
           name="phone"
           type="tel"
           title="Телефон" 
-          placeholder="+7 (ХХХ) ХХХ ХХ ХХ" 
+          placeholder="+7123456789" 
           invalidMsg="${errors.phone}"
         }}}
         {{{InputConteiner
@@ -112,6 +119,7 @@ export class Registr extends Block {
           invalidMsg="${errors.passwordConfirm}"
         }}}
         {{{Button 
+          onClick=onSubmit
           disabled="${base.disabledBtn}"
           text="Зарегистрироваться"
           className="${styleBtn.buttonRegistr}"
@@ -119,6 +127,6 @@ export class Registr extends Block {
         <a class="link" href="sigin.hbs">Войти</a>
       </form>
     </main>
-    `
+    `;
   }
 }

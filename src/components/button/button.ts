@@ -1,17 +1,17 @@
-import { Block } from 'core'
+import { Block } from 'core';
 
 interface ButtonProps {
-  text?: string
-  img?: string
-  alt?: string
-  onClick: () => void
-  disabled: '' | 'disabled'
-  className: string
+  text?: string;
+  img?: string;
+  alt?: string;
+  onClick: () => void;
+  disabled: '' | 'disabled';
+  className: string;
 }
 
 export class Button extends Block {
   constructor({ text, onClick, disabled, className, img, alt }: ButtonProps) {
-    super({ text, img, alt, className, disabled, events: { click: onClick } })
+    super({ text, img, alt, className, disabled, events: { click: onClick } });
   }
   render(): string {
     return `
@@ -22,6 +22,6 @@ export class Button extends Block {
           {{text}}
         {{/if}}
       </button>
-    `
+    `;
   }
 }

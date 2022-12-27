@@ -1,28 +1,32 @@
-import { Block } from 'core'
-import * as buttonClass from 'components/button/button.module.scss'
-import * as stile from '../../styles/form.module.scss'
+import { Block } from 'core';
+import * as buttonClass from 'components/button/button.module.scss';
+import * as stile from '../../styles/form.module.scss';
+import { submitForm } from 'utils/submitForm';
 
 export class Sigin extends Block {
+  constructor() {
+    super();
+    this.setProps({
+      onSubmit: () => submitForm(),
+    });
+  }
   protected getStateFromProps() {
     this.state = {
       base: {
-        disabledBtn: 'disabled',
+        disabledBtn: '',
       },
       values: {
         login: '',
         password: '',
       },
       errors: {
-        login: 'w',
+        login: '',
         password: '',
       },
-    }
+    };
   }
   render(): string {
-    const { base, values, errors } = this.state
-    if (!errors.login && !errors.password) {
-      base.disabledBtn = undefined
-    }
+    const { base, errors } = this.state;
     return `
     <main class="mainCentr">
       <form class="${stile.formSigin}">
@@ -32,7 +36,7 @@ export class Sigin extends Block {
           title="Логин"
           placeholder="Логин"
           pageUse="sigin"
-          invalidMsg="${errors.login}"
+          invalidMsg=""
         }}}
         {{{InputConteiner
           name="password"
@@ -46,39 +50,11 @@ export class Sigin extends Block {
           disabled="${base.disabledBtn}"
           text="Войти"
           className="${buttonClass.buttonSigin}"
+          onClick=onSubmit
         }}}
         <a class="link" href="">Нет аккаунта?</a>
       </form>
     </main>
-    `
+    `;
   }
 }
-// {{{> 'input/input'
-//   name="login"
-//   title="Логин"
-//   placeholder="Логин"
-// }}}
-// {{{> 'input/input'
-//   name="password"
-//   title="Пароль"
-//   placeholder="Пароль"
-//   inputClass="inputInvalid"
-//   valid=""
-// }}}
-// super()
-//     this.setProps({
-//       classBtn: 'buttonSigin',
-//       valid: 'notDisplay',
-//       inputClass: 'input',
-//       invalidMsg: 'Неверный логин или пароль',
-//       inputClassInForm: 'inputConteinerSigin',
-//       inputTitleClass: 'inputTitle',
-//       disabledBtn: () => {
-//         if (0) {
-//           return 'disabled'
-//         } else {
-//           return ''
-//         }
-//       },
-//       onClick: () => {},
-//     })

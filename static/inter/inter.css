@@ -1,71 +1,72 @@
+/* stylelint-disable order/properties-order */
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
   font-weight: 100;
+  font-family: Inter;
+  font-style: normal;
+  src: url('Inter-Thin.woff2?v=3.19') format('woff2');
   font-display: swap;
-  src: url("Inter-Thin.woff2?v=3.19") format("woff2")
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
   font-weight: 200;
+  font-family: Inter;
+  font-style: normal;
+  src: url('Inter-ExtraLight.woff2?v=3.19') format('woff2');
   font-display: swap;
-  src: url("Inter-ExtraLight.woff2?v=3.19") format("woff2")
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
   font-weight: 300;
+  font-family: Inter;
+  font-style: normal;
+  src: url('Inter-Light.woff2?v=3.19') format('woff2');
   font-display: swap;
-  src: url("Inter-Light.woff2?v=3.19") format("woff2")
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
   font-weight: 400;
+  font-family: Inter;
+  font-style: normal;
+  src: url('Inter-Regular.woff2?v=3.19') format('woff2');
   font-display: swap;
-  src: url("Inter-Regular.woff2?v=3.19") format("woff2")
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
   font-weight: 500;
+  font-family: Inter;
+  font-style: normal;
+  src: url('Inter-Medium.woff2?v=3.19') format('woff2');
   font-display: swap;
-  src: url("Inter-Medium.woff2?v=3.19") format("woff2")
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
   font-weight: 600;
+  font-family: Inter;
+  font-style: normal;
+  src: url('Inter-SemiBold.woff2?v=3.19') format('woff2');
   font-display: swap;
-  src: url("Inter-SemiBold.woff2?v=3.19") format("woff2")
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
   font-weight: 700;
+  font-family: Inter;
+  font-style: normal;
+  src: url('Inter-Bold.woff2?v=3.19') format('woff2');
   font-display: swap;
-  src: url("Inter-Bold.woff2?v=3.19") format("woff2")
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
   font-weight: 800;
+  font-family: Inter;
+  font-style: normal;
+  src: url('Inter-ExtraBold.woff2?v=3.19') format('woff2');
   font-display: swap;
-  src: url("Inter-ExtraBold.woff2?v=3.19") format("woff2")
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
   font-weight: 900;
+  font-family: Inter;
+  font-style: normal;
+  src: url('Inter-Black.woff2?v=3.19') format('woff2');
   font-display: swap;
-  src: url("Inter-Black.woff2?v=3.19") format("woff2")
 }

@@ -1,1 +1,1 @@
-export { ChatCard as default } from './chatCard'
+export { ChatCard as default } from './chatCard';

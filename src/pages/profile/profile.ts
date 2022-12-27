@@ -1,32 +1,32 @@
-import { Block } from 'core'
-import * as style from '../../styles/form.module.scss'
-import * as styleBtn from 'components/button/button.module.scss'
+import { Block } from 'core';
+import * as style from '../../styles/form.module.scss';
+import * as styleBtn from 'components/button/button.module.scss';
 
 interface ProfileState {
   errors: {
-    email: string
-    login: string
-    first_name: string
-    second_name: string
-    phone: string
-    display_name: string
-  }
+    email: string;
+    login: string;
+    first_name: string;
+    second_name: string;
+    phone: string;
+    display_name: string;
+  };
   values: {
-    email: string
-    login: string
-    first_name: string
-    second_name: string
-    phone: string
-    display_name: string
-  }
+    email: string;
+    login: string;
+    first_name: string;
+    second_name: string;
+    phone: string;
+    display_name: string;
+  };
   disabled: {
-    email: boolean
-    login: boolean
-    first_name: boolean
-    second_name: boolean
-    phone: boolean
-    display_name: boolean
-  }
+    email: boolean;
+    login: boolean;
+    first_name: boolean;
+    second_name: boolean;
+    phone: boolean;
+    display_name: boolean;
+  };
 }
 
 export class Profile extends Block {
@@ -56,11 +56,10 @@ export class Profile extends Block {
         phone: true,
         display_name: true,
       },
-    }
+    };
   }
   render(): string {
-    const { errors, values, disabled } = <ProfileState>this.state
-    //<button><img src="${require('../../../static/arrow.svg')}" alt="back"></button>
+    const { errors, values, disabled } = <ProfileState>this.state;
     return `
     <main class="main">
       <div class="${style.navBar}">
@@ -133,6 +132,6 @@ export class Profile extends Block {
         </div>
       </div>
     </main>
-    `
+    `;
   }
 }

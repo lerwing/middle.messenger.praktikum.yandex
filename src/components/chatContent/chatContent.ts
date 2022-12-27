@@ -1,11 +1,17 @@
-import { Block } from 'core'
-import * as style from './chatContent.module.scss'
+import { Block } from 'core';
+import * as style from './chatContent.module.scss';
 
+interface ChatContentProps {
+  chatDate?: string;
+  myMessage?: boolean;
+  MessageText?: string;
+  MessageTime?: string;
+}
 export class ChatContent extends Block {
-  constructor({ onChange = () => {}, ...props }) {
+  constructor({ ...props }: ChatContentProps) {
     super({
       ...props,
-    })
+    });
   }
 
   render(): string {
@@ -24,6 +30,6 @@ export class ChatContent extends Block {
       <span class="${style.hisMessageTime}">{{MessageTime}}</span>
     </article>
     {{/if}}
-    `
+    `;
   }
 }

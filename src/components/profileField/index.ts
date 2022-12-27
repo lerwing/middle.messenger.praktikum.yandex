@@ -1,1 +1,1 @@
-export { ProfileField as default } from './profileField'
+export { ProfileField as default } from './profileField';

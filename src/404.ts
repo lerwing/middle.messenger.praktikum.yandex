@@ -1,7 +1,7 @@
-import { Block, renderDOM, registerComponent } from 'core'
-import Page404 from 'pages/404'
-import './styles/style.scss'
+import { Block, renderDOM, registerComponent } from 'core';
+import Page404 from 'pages/404';
+import './styles/style.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderDOM(new Page404())
-})
+  renderDOM(new Page404());
+});

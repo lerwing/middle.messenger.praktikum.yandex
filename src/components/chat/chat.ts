@@ -1,11 +1,31 @@
-import { Block } from 'core'
-import * as style from './chat.module.scss'
+import { Block } from 'core';
+import { validateForm } from 'utils/validateForm';
+import * as style from './chat.module.scss';
+
+interface ChatProps {
+  selectChatName?: string;
+  onSendMsg: () => void;
+}
 
 export class Chat extends Block {
-  constructor({ onChange = () => {}, ...props }) {
+  constructor({ ...props }: ChatProps) {
     super({
       ...props,
-    })
+      onSendMsg: () => {
+        const inputMsgElem = this.element?.children[2].children[0] as HTMLInputElement;
+        if (typeof inputMsgElem.value === 'string' && typeof inputMsgElem.name === 'string') {
+          const errorMsg = validateForm({ type: inputMsgElem.name, value: inputMsgElem.value });
+          if (!errorMsg) {
+            console.log({ [inputMsgElem.name]: inputMsgElem.value });
+            inputMsgElem.value = '';
+          } else {
+            console.log(errorMsg);
+          }
+        } else {
+          console.log('Ошибка дочений элемент не найден');
+        }
+      },
+    });
   }
 
   render(): string {
@@ -15,9 +35,11 @@ export class Chat extends Block {
         <header class="${style.chatHeader}">
           <div class="${style.chatAvatar}"></div>
           <span class="${style.chatName}">{{selectChatName}}</span>
-          <button class="${style.chatOptions}">
-            <img src="${require('../../../static/advance.svg')}" alt="options">
-          </button>
+          {{{Button
+            className="${style.chatOptions}"
+            img = "${require('../../../static/advance.svg')}"
+            alt="advance"
+          }}}
         </header>
         <section class="${style.chatContent}">
           {{{ChatContent
@@ -57,14 +79,17 @@ export class Chat extends Block {
             name="message"
             placeholder="Сообщение"
           }}}
-          <button class="${style.chatSend}">
-            <img src="${require('../../../static/arrow.svg')}" alt="send">
-          </button>
+          {{{Button
+            className="${style.chatSend}"
+            img = "${require('../../../static/arrow.svg')}"
+            onClick=onSendMsg
+            alt="send"
+          }}}
         </form>
       </div>
     {{else}}
       <div class="${style.notSelectChat}">Выберите чат чтобы отправить сообщение</div>
     {{/if}}
-    `
+    `;
   }
 }

@@ -1,1 +1,1 @@
-export { Sigin as default } from './sigin'
+export { Sigin as default } from './sigin';

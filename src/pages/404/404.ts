@@ -1,4 +1,4 @@
-import { Block } from 'core'
+import { Block } from 'core';
 
 export class Page404 extends Block {
   protected render(): string {
@@ -10,6 +10,6 @@ export class Page404 extends Block {
         <a class="link" href="">Назад к чатам</a>
       </div>
     </main>
-    `
+    `;
   }
 }

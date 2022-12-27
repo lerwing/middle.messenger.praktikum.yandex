@@ -1,4 +1,7 @@
 {
+  "scss.validate": false,
+  "css.validate": false,
+  "less.validate": false,
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "[javascript]": {

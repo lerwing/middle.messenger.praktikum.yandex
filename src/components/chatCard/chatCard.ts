@@ -1,19 +1,22 @@
-import { Block } from 'core'
-import * as style from './chatCard.module.scss'
+import { Block } from 'core';
+import * as style from './chatCard.module.scss';
 interface ChatCardProps {
-  count: number
-  chatName: string
-  userMessage: string
-  message: string
-  dateMessage: string
-  chatActiv: boolean
-  selectChatName: string
+  count: number;
+  chatName: string;
+  userMessage: string;
+  message: string;
+  dateMessage: string;
+  chatActiv: boolean;
+  onClick: () => void;
 }
 export class ChatCard extends Block {
-  constructor({ ...props }: ChatCardProps) {
+  constructor({ onClick, ...props }: ChatCardProps) {
     super({
       ...props,
-    })
+      events: {
+        click: onClick,
+      },
+    });
   }
   render(): string {
     return `
@@ -35,6 +38,6 @@ export class ChatCard extends Block {
         </div>
       </span>
     </button>
-    `
+    `;
   }
 }
