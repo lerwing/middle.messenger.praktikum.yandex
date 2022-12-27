@@ -2,9 +2,9 @@ import EventBus from './EventBus';
 import { nanoid } from 'nanoid';
 import Handlebars from 'handlebars';
 
-interface BlockMeta<P = any> {
-  props: P;
-}
+// interface BlockMeta<P = any> {
+//   props: P;
+// }
 
 type Events = Values<typeof Block.EVENTS>;
 
@@ -17,7 +17,7 @@ export default class Block<P extends object = {}> {
   } as const;
   static componentName: string;
   public id = nanoid(6);
-  private readonly _meta: BlockMeta;
+  // private readonly _meta: BlockMeta;
 
   protected _element: Nullable<HTMLElement> = null;
   protected readonly props: P;
@@ -31,9 +31,9 @@ export default class Block<P extends object = {}> {
   public constructor(props?: P) {
     const eventBus = new EventBus<Events>();
 
-    this._meta = {
-      props,
-    };
+    // this._meta = {
+    //   props,
+    // };
 
     this.getStateFromProps(props);
 
@@ -59,6 +59,8 @@ export default class Block<P extends object = {}> {
   }
 
   protected getStateFromProps(props: any): void {
+    if (props) {
+    }
     this.state = {};
   }
 
@@ -71,7 +73,10 @@ export default class Block<P extends object = {}> {
     this.componentDidMount(props);
   }
 
-  componentDidMount(props: P) {}
+  componentDidMount(props: P) {
+    if (props) {
+    }
+  }
 
   _componentDidUpdate(oldProps: P, newProps: P) {
     const response = this.componentDidUpdate(oldProps, newProps);
@@ -82,6 +87,8 @@ export default class Block<P extends object = {}> {
   }
 
   componentDidUpdate(oldProps: P, newProps: P) {
+    if (oldProps === newProps) {
+    }
     return true;
   }
 
