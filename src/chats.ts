@@ -1,4 +1,4 @@
-import { Block, renderDOM, registerComponent } from 'core';
+import { renderDOM, registerComponent } from 'core';
 import Button from 'components/button';
 import InputConteiner from 'components/inputConteiner';
 import InputError from 'components/inputError';
