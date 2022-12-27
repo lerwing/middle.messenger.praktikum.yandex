@@ -3,6 +3,7 @@
   "version": "0.2",
   "description": "",
   "scripts": {
+    "stylelint": "stylelint '**/*{.css,.scss}'",
     "dev": "parcel src/index.html --no-source-maps --no-cache",
     "build": "parcel build src/index.html --no-cache",
     "start": "npm run build && node ./server.js"
@@ -13,9 +14,7 @@
     "pages": "./src/pages",
     "utils": "./src/utils"
   },
-  "engines": {
-    "node": "16.15.0"
-  },
+
   "keywords": [],
   "author": "LoM",
   "license": "ISC",
