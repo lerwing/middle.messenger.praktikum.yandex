@@ -1,0 +1,61 @@
+@import '../../styles/mixsins.scss';
+
+.input {
+  width: 250px;
+  height: 31px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  padding-left: 11px;
+  padding-right: 11px;
+  background: $wite;
+  border: 0.25px solid $black03;
+  border-radius: 10px;
+
+  &:focus {
+    box-shadow: 0px 0px 4px $pink-opaciti;
+    outline: none;
+  }
+
+  &Default {
+    @extend .input;
+    margin: 0;
+  }
+
+  &Search {
+    @extend .input;
+    margin: 0;
+    margin-left: 5px;
+  }
+
+  &Invalid {
+    @extend .input;
+    border: 0.25px solid $red;
+  }
+  &Profile {
+    @extend .input;
+    text-align: right;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    &Invalid {
+      @extend .inputProfile;
+      border: 0.25px solid $red;
+    }
+  }
+}
+
+.inputMessage {
+  width: 100%;
+  min-width: 200px;
+  height: 32px;
+  margin-bottom: 10px;
+  margin-left: 62px;
+  background: $wite;
+  border: 1px solid $pink;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  &:focus {
+    box-shadow: 0px 0px 2px $pink-opaciti;
+    outline: none;
+  }
+}

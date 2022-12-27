@@ -28,4 +28,3 @@
 - `npm run start` — сборка и запуск локального сервера.
 - `nmp run dev` — запуск проекта на сервере TypeScript, для разработки.
 
-- «[Ссылка на Pull request](https://github.com/lerwing/middle.messenger.praktikum.yandex/pull/14)»
