@@ -8,6 +8,7 @@ interface ChatContentProps {
   MessageTime?: string;
 }
 export class ChatContent extends Block {
+  static componentName = 'ChatContent';
   constructor({ ...props }: ChatContentProps) {
     super({
       ...props,

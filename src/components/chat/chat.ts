@@ -8,6 +8,7 @@ interface ChatProps {
 }
 
 export class Chat extends Block {
+  static componentName = 'Chat';
   constructor({ ...props }: ChatProps) {
     super({
       ...props,

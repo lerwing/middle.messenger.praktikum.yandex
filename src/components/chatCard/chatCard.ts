@@ -10,6 +10,7 @@ interface ChatCardProps {
   onClick: () => void;
 }
 export class ChatCard extends Block {
+  static componentName = 'ChatCard';
   constructor({ onClick, ...props }: ChatCardProps) {
     super({
       ...props,
